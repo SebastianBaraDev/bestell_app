@@ -4,28 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bestell App</title>
+
+    <script src="./scripts/menu_template.js"></script>
+    <script src="./script.js"></script>
+
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./styles/menu_template.css">
 </head>
 <body onload="init()">
-   <contentWrapper>
+   
     <header>
         <nav>
-            <img src="assets/img/logo.png" alt="Bestell App Logo">
-            <img src="assets/img/menu.png" alt="Menü Icon">
+          <div class="contentWrapperNav">
+            <img id="bestellapp_logo" src="assets/img/bestellapp_logo.png" alt="Bestell App Logo">
+            <img src="assets/icons/menu.png" alt="Menü Icon" cursor="pointer">
+          </div>
         </nav>
-    </header>
-   </contentWrapper> 
+    </header> 
 
     <main>
-        <contentWrapper>
+        <div class="contentWrapper">
 
-        </contentWrapper>
+        </div>
     </main>
 
     <footer>
-      <contentWrapper>
+      <div class="contentWrapper">
         <p>&copy; 2024 Bestell App</p>
         <a href="impressum.html">Impressum</a> | <a href="datenschutz.html">Datenschutz</a>
-      </contentWrapper>
+      </div>
     </footer>
 </body>
 </html>

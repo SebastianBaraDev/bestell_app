@@ -1,0 +1,39 @@
+
+
+.menuWidget {
+    display: flex;
+    gap: 20px;
+    border-radius: 5px;
+    padding: 4px;
+    background-color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 20px;
+}
+
+.menuText {
+    display: flex;
+    flex-direction: column;
+}
+
+.menuTitle {
+    display: flex;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+
+
+.addToCartButton {
+    display: flex;
+    justify-content: flex-end;
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
