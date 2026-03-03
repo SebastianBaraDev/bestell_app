@@ -11,3 +11,5 @@
     </div>
 </div>
 `
+
+menuItemsContainer.innerHTML += menuTemplate;

@@ -21,19 +21,19 @@ header {
 }
 
 nav{
-    background-color: #211814;
+    background-color: #3B241B;
     height: 128px;
 }
 
 #bestellapp_logo {
-    width: 88px;
+    width: 120px;
     position: relative;
     z-index: 2;
 }
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #121212;
+    background-color: #2A1610;
     width: 100vw;
     height: 100vh;
 }
@@ -44,11 +44,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
-}
-
-#logo_section {
-    background-color: #211814;
+    height: 100%;
 }
 
 #logo_img {
@@ -67,17 +63,10 @@ body {
   bottom: 0;
   transform: translate(-50%, 50%);
   z-index: 14;
-
   width: 220px;
   aspect-ratio: 1 / 1;
-
-  background: #1B0F0C;
+  background: #3B241B;
   border-radius: 50%;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
   box-shadow:
     0 25px 50px rgba(0,0,0,.6);
 }
@@ -92,6 +81,13 @@ body {
     align-items: center;
     padding-top: 90px;
     gap: 20px;
+    padding-top: 120px;
+}
+
+.headline {
+    font-size: 48px;
+    font-weight: bold;
+    color: white;
 }
 
 .rating {
@@ -100,4 +96,52 @@ body {
     gap: 5px;
     background-color: rgb(57, 48, 34);
     padding: 5px;
+}
+
+.subline {
+    text-align: center;
+    font-size: 18px;
+    padding-bottom: 80px;
+}
+
+.section_bar {
+   background-color: #3B241B;
+   height: 60px;
+   display: flex;
+   margin-bottom: 20px;
+}
+
+.section_bar h2 {
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+}
+
+.section_bar img {
+    padding-bottom: 20px;
+}
+
+.contentWrapperBar {
+    width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-left: 30px;
+}
+
+footer {
+    background-color: #3B241B;
+    height: 60px;
+    text-align: center;
+}
+
+.contentWrapperFooter {
+    width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    height: 100%;
 }
