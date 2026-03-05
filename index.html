@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bestell App</title>
 
-    <script src="./scripts/menu_template.js"></script>
-    <script src="./script.js"></script>
-
     <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="./styles/menu_template.css">
+    <link rel="stylesheet" href="./styles/dish_template.css">
     <link rel="stylesheet" href="./styles/fonts.css">
+
+    <script src="./scripts/dishes.js"></script>
+    <script src="./scripts/dish_template.js"></script>
+    <script src="./script.js"></script>
 </head>
 <body onload="init()">
    
@@ -38,6 +39,9 @@
                 <p class="subline">Premium cuts. Open flame. Pure flavor.</p>
         </section>
 
+        <section class="menucardContentWrapper">
+        <section class="content">
+        
         <section id="menuSection">
             <div class="section_bar">
               <div class="contentWrapperBar">
@@ -47,7 +51,7 @@
             </div>
 
             <div class="contentWrapper">
-              <div id="menuItemsContainer">
+              <div id="meat_dishes">
                 <!-- Menü-Items would be dynamically inserted here -->
               </div>
             </div>
@@ -62,7 +66,7 @@
             </div>
 
             <div class="contentWrapper">
-              <div id="SidesItemsContainer">
+              <div id="side_dishes">
                 <!-- Sides-Items would be dynamically inserted here -->
               </div>
             </div>
@@ -77,11 +81,20 @@
             </div>
 
             <div class="contentWrapper">
-              <div id="SidesItemsContainer">
-                <!-- Sides-Items would be dynamically inserted here -->
+              <div id="drinks">
+                <!-- Drinks-Items would be dynamically inserted here -->
               </div>
             </div>
         </section>
+        </section>
+
+        <section class="basketWrapper">
+          <div class="basket" id="basket">
+          </div>
+        </section>
+
+        </section>
+
     </main>
 
     <footer>
