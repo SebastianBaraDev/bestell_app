@@ -58,6 +58,12 @@ function renderShoppingCartDesktop() {
       }
 }
 
+function renderPriceSectionDesktop(dish, price, amount) {
+  let prices = document.getElementById('priceSection');
+  prices.innerHTML = '';
+  prices.innerHTML = get
+}
+
 function renderShoppingCartMobile() {
   let shoppingCartMobile = document.getElementById('dishWrapper');
   shoppingCartMobile.innerHTML = '';
@@ -75,6 +81,7 @@ function decreaseAmount(id){
     dish.amount--;
   } else {
       shoppingCart.splice(shoppingCart.indexOf(dish), 1);
+      dish.amount--;
     }
   renderShoppingCartDesktop();
 }

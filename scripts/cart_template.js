@@ -14,3 +14,23 @@ function getCartTemplate(dish, price) {
     </div>
   `;
 }
+
+function getPriceTemplate(price) {
+  return `
+    <div class="priceContainer">
+
+        <div class="text">
+          <p>Zwischensumme:</p>
+          <p>${dish.amount} x </p>
+          <p>Lieferkosten:</p>
+          <p>${price.toFixed(2).replace('.', ',')} €</p>
+          <p>Gesamtsumme:</p>
+        </div>
+
+        <div class="price">
+        
+        </div>
+
+    </div>
+  `;
+}
