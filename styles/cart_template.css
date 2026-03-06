@@ -1,0 +1,22 @@
+.basketTitle {
+    text-align: center;
+    padding-bottom: 16px;
+    text-decoration: underline;
+}
+
+.dishContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 8px;
+}
+
+.dishSubline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dishContainer img {
+    width: 24px;
+}

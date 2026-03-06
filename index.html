@@ -7,11 +7,13 @@
 
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./styles/dish_template.css">
+    <link rel="stylesheet" href="./styles/cart_template.css">
     <link rel="stylesheet" href="./styles/fonts.css">
     <link rel="icon" type="favicon" href="assets/icons/favicon.png">
 
     <script src="./scripts/dishes.js"></script>
     <script src="./scripts/dishes_templates.js"></script>
+    <script src="./scripts/cart_template.js"></script>
     <script src="./script.js"></script>
 </head>
 <body onload="init()">
@@ -91,6 +93,12 @@
 
         <section class="basketWrapper">
           <div class="basket" id="basket">
+            <h2 class="basketTitle">Your Basket</h2>
+            <div id="shoppingCartDesktop">
+              <div id="dishWrapper">
+              <!-- Shopping cart items will be rendered here -->
+              </div>
+            </div>
           </div>
         </section>
 

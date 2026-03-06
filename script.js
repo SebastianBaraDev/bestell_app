@@ -2,6 +2,8 @@ const premiumCuts = myDishes.filter(d => d.category === "premium_cuts");
 const sideDishes = myDishes.filter(d => d.category === "sides");
 const drinks = myDishes.filter(d => d.category === "drinks");
 
+let shoppingCart = [];
+
 function init() {
   renderDishes();
 }
@@ -36,15 +38,57 @@ function renderDrinks(drinks) {
   }
 }
 
-//Warenkorb in Responsive als Overlay mit Button zum Öffnen unten
-//Gerichte Widgets mit onclick --> Warenkorb
-
-function addToCart(dishId) {
-    
+function addToCart(id) {
+  let dish = myDishes.find(d => d.id === id); // Filter = Array / Find = Eizelnes Element
+  dish.amount++;
+  if (!shoppingCart.includes(dish)) {
+      shoppingCart.push(dish);
+    }
+  renderShoppingCartDesktop();
 }
-  //Zwischenvariable oder Array
-//Gericht Anzahl erhöhen und senken
-  //Push - Splice
+
+function renderShoppingCartDesktop() {
+  let shoppingCartDesktop = document.getElementById('dishWrapper');
+  shoppingCartDesktop.innerHTML = '';
+
+  for (let i = 0; i < shoppingCart.length; i++) {
+       const dish = shoppingCart[i];
+       const price = dish.price * dish.amount;
+       shoppingCartDesktop.innerHTML += getCartTemplate(dish, price);
+      }
+}
+
+function renderShoppingCartMobile() {
+  let shoppingCartMobile = document.getElementById('dishWrapper');
+  shoppingCartMobile.innerHTML = '';
+
+  for (let i = 0; i < shoppingCart.length; i++) {
+       const dish = shoppingCart[i];
+       const price = dish.price * dish.amount;
+       shoppingCartMobile.innerHTML += getCartTemplate(dish, price);
+      }
+}
+
+function decreaseAmount(id){
+  let dish = shoppingCart.find(d => d.id === id);
+  if (dish.amount > 1) {
+    dish.amount--;
+  } else {
+      shoppingCart.splice(shoppingCart.indexOf(dish), 1);
+    }
+  renderShoppingCartDesktop();
+}
+
+function increaseAmount(id) {
+  let dish = shoppingCart.find(d => d.id === id);
+  if (dish.amount < 20) {
+    dish.amount++;
+  } else {
+    alert("You cannot order more than 20 of the same dish.");
+  }
+  renderShoppingCartDesktop();
+}
+
 //Gericht entfernen - Delete Function
 //Gesamtpreis berechnen
 //Bestellung abschicken (Dialog mit Bestätigung)

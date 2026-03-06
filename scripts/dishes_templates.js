@@ -9,7 +9,7 @@ function getMeatDishTemplate(meatDishesIndex) {
     </div>
     <div class="menuAssets">
         <p class="price">${premiumCuts[meatDishesIndex].price.toFixed(2)} €</p>
-        <button class="addToCartButton" onclick="addToCart()">Add to basket</button>
+        <button class="addToCartButton" onclick="addToCart(${premiumCuts[meatDishesIndex].id})">Add to basket</button>
     </div>
   </div>
 </div>
@@ -27,7 +27,7 @@ function getSidesDishTemplate(sideDishesIndex) {
     </div>
     <div class="menuAssets">
         <p class="price">${sideDishes[sideDishesIndex].price.toFixed(2)} €</p>
-        <button class="addToCartButton" onclick="addToCart()">Add to basket</button>
+        <button class="addToCartButton" onclick="addToCart(${sideDishes[sideDishesIndex].id})">Add to basket</button>
     </div>
   </div>
 </div>
@@ -45,7 +45,7 @@ function getDrinksDishTemplate(drinksIndex) {
     </div>
     <div class="menuAssets">
         <p class="price">${drinks[drinksIndex].price.toFixed(2)} €</p>
-        <button class="addToCartButton" onclick="addToCart()">Add to basket</button>
+        <button class="addToCartButton" onclick="addToCart(${drinks[drinksIndex].id})">Add to basket</button>
     </div>
   </div>
 </div>
