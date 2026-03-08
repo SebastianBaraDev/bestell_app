@@ -1,0 +1,57 @@
+#orderSuccessDialog {
+    background-color: #3B241B;
+    border-radius: 5px;
+    border: 1px solid #D4AF37;
+    margin: auto;
+}
+
+#orderSuccessDialog::backdrop {
+    background-color: #171312ab;
+}
+
+#foodtruck {
+    width: 60px;
+}
+
+.closeIcon {
+    cursor: pointer;
+    margin-left: auto;
+}
+
+dialog {
+    transition: opacity 0.5s ease-out;
+}
+
+dialog.hide {
+    opacity: 0;
+}
+
+#mobileBasketDialog {
+    background-color: #9d6e5b;
+    border-radius: 5px;
+    border: 1px solid #D4AF37;
+    margin: auto;
+    padding: 16px;
+    width: 300px;
+    height: 520px;
+}
+
+#mobileBasketDialog::backdrop {
+    background-color: #171312ab;
+}
+
+#mobileBasketDialog header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+#mobileBasketDialog h2 {
+    text-decoration: underline;
+}
+
+#mobileDishWrapper {
+  overflow-y: auto;
+  max-height: 300px;
+}

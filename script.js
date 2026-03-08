@@ -39,13 +39,15 @@ function renderDrinks(drinks) {
 }
 
 function addToCart(id) {
-  let dish = myDishes.find(d => d.id === id); // Filter = Array / Find = Eizelnes Element
+  let dish = myDishes.find(d => d.id === id);
   dish.amount++;
   if (!shoppingCart.includes(dish)) {
       shoppingCart.push(dish);
     }
   renderShoppingCartDesktop();
-  renderPriceSectionDesktop()
+  renderPriceSectionDesktop();
+  renderShoppingCartMobile();
+  renderPriceSectionMobile();
 }
 
 function renderShoppingCartDesktop() {
@@ -58,6 +60,7 @@ function renderShoppingCartDesktop() {
        shoppingCartDesktop.innerHTML += getCartTemplate(dish, price);
       }
   renderPriceSectionDesktop();
+  renderPriceSectionMobile();
 }
 
 function renderPriceSectionDesktop() {
@@ -71,7 +74,7 @@ function renderPriceSectionDesktop() {
 }
 
 function renderShoppingCartMobile() {
-  let shoppingCartMobile = document.getElementById('dishWrapper');
+  let shoppingCartMobile = document.getElementById('mobileDishWrapper');
   shoppingCartMobile.innerHTML = '';
 
   for (let i = 0; i < shoppingCart.length; i++) {
@@ -79,6 +82,16 @@ function renderShoppingCartMobile() {
        const price = dish.price * dish.amount;
        shoppingCartMobile.innerHTML += getCartTemplate(dish, price);
       }
+}
+
+function renderPriceSectionMobile() {
+  const subtotal = calculateSubtotal();
+  const deliverycost = shoppingCart.length > 0 ? 5 : 0;
+  const total = subtotal + deliverycost;
+
+  let prices = document.getElementById('mobilePriceSection');
+  prices.innerHTML = '';
+  prices.innerHTML = getPriceTemplate(subtotal, total)
 }
 
 function decreaseAmount(id){
@@ -90,6 +103,7 @@ function decreaseAmount(id){
       dish.amount--;
     }
   renderShoppingCartDesktop();
+  renderShoppingCartMobile();
 }
 
 function increaseAmount(id) {
@@ -100,6 +114,7 @@ function increaseAmount(id) {
     alert("You cannot order more than 20 of the same dish.");
   }
   renderShoppingCartDesktop();
+  renderShoppingCartMobile();
 }
 
 function deleteDish(id){
@@ -111,6 +126,7 @@ function deleteDish(id){
   cartDish = 0;
 
   renderShoppingCartDesktop();
+  renderShoppingCartMobile();
 }  
 
 function calculateSubtotal() {
@@ -124,23 +140,44 @@ function calculateSubtotal() {
 }
 
 function showOrderSuccessDialog(){
-  let element = document.getElementById("orderSuccess");
-  element.classList.add("showElement");
+  hideBasketMobile();
+  cleanBaskets();
+  const dialog = document.getElementById("orderSuccessDialog");
+  dialog.showModal();
+  setTimeout(() => {
+  dialog.classList.add('hide'); //starts CSS Fade-out
+  setTimeout(() => dialog.close(), 500); // .close() after Fade-out time
+}, 4000);
+}
+
+function cleanBaskets(){
+  let shoppingCartDesktop = document.getElementById('dishWrapper');
+  shoppingCartDesktop.innerHTML = '';
+  let prices = document.getElementById('priceSection');
+  prices.innerHTML = '';
+  let shoppingCartMobile = document.getElementById('mobileDishWrapper');
+  shoppingCartMobile.innerHTML = '';
+  let mobilePrices = document.getElementById('mobilePriceSection');
+  mobilePrices.innerHTML = '';
+  resetArrays();
+}
+
+function resetArrays(){
+  shoppingCart = [];
+    for (let i = 0; i < myDishes.length; i++) {
+       const dish = myDishes[i];
+       dish.amount = 0;
+}
 }
 
 function hideOrderSuccessDialog(){
-  let element = document.getElementById("orderSuccess");
-  element.classList.remove("showElement");
+  document.getElementById("orderSuccessDialog").close();
 }
 
-//Order Success-Dialog einfügen --> orderSuccess ID
-//Dialog nach 4 sec automatisch schließen
-//Order senden Button im Warenkorb hinzufügen
+function showBasketMobileDialog() {
+    document.getElementById("mobileBasketDialog").showModal();
+}
 
-//responive Warenkorb-Button hinzufügen
-//OpenDialog Funktion auf den Button legen
-//Dialog anlegen
-//Dialog mit Warenkorb Inhalten füllen - bestehende Funktionen prüfen
-//Dialog schließen Funktion
-
-//Responsive Design anpassen
+function hideBasketMobile() {
+    document.getElementById("mobileBasketDialog").close();
+}

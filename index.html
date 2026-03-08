@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./styles/dish_template.css">
     <link rel="stylesheet" href="./styles/cart_template.css">
+    <link rel="stylesheet" href="./styles/dialogs.css">
     <link rel="stylesheet" href="./styles/fonts.css">
     <link rel="icon" type="favicon" href="assets/icons/favicon.png">
 
@@ -95,6 +96,8 @@
               </div>
             </div>
         </section>
+
+        <button class="button" onclick="showBasketMobileDialog()">Open Basket</button>
         </section>
 
         <section class="basketWrapper">
@@ -110,6 +113,37 @@
             </div>
           </div>
         </section>
+
+        <dialog id="orderSuccessDialog">
+          <div class="right">
+            <img src="./assets/icons/close.png" onclick="hideOrderSuccessDialog()" class="closeIcon">
+          </div>
+          <div class="centered">  
+            <img src="./assets/icons/foodtruck.png" id="foodtruck">
+            <h1>Order confirmed!</h1>
+            <p>Your food is on the way!</p>
+          </div>
+        </dialog>
+
+        <dialog id="mobileBasketDialog">
+          <header>
+            <h2>Your Basket</h2>
+            <img src="./assets/icons/close.png" onclick="hideBasketMobile()" class="closeIcon">
+          </header>
+          <main>
+              <div id="basketMobile">
+                <div id="shoppingCartMobile">
+                  <div id="mobileDishWrapper">
+                  <!-- Shopping cart items will be rendered here -->
+                  </div>
+                  <div id="mobilePriceSection">
+                  <!-- Prices will be rendered here -->
+                  </div>
+                </div>
+              </div>
+          </main>
+
+        </dialog>
 
         </section>
 

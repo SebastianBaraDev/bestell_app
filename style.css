@@ -223,3 +223,17 @@ footer a:hover {
 .showElement {
     display: block;
 }
+
+.centered {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 16px;
+}
+
+.right {
+    display: flex;
+    justify-content: end;
+    padding: 16px;
+}
