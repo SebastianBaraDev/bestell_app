@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./styles/cart_template.css">
     <link rel="stylesheet" href="./styles/dialogs.css">
     <link rel="stylesheet" href="./styles/fonts.css">
+    <link rel="stylesheet" href="./styles/responsive.css">
     <link rel="icon" type="favicon" href="assets/icons/favicon.png">
 
     <script src="./scripts/dishes.js"></script>
@@ -23,7 +24,7 @@
         <nav>
           <div class="contentWrapperNav">
             <img id="bestellapp_logo" src="assets/img/bestellapp_logo.png" alt="Bestell App Logo">
-            <img src="assets/icons/menu.png" alt="Menü Icon" cursor="pointer">
+            <img src="assets/icons/menu.png" alt="Menü Icon" id="menuIcon">
           </div>
         </nav>
             <img id="header_img" src="assets/img/ribeye_steak.png" alt="Menü Hintergrundbild">
@@ -97,7 +98,7 @@
             </div>
         </section>
 
-        <button class="button" onclick="showBasketMobileDialog()">Open Basket</button>
+        <button class="button" onclick="showBasketMobileDialog()" id="basketMobile">Open Basket</button>
         </section>
 
         <section class="basketWrapper">

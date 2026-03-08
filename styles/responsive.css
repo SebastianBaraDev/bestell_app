@@ -1,0 +1,107 @@
+@media (max-width:1200px){
+    .dishImage {
+        width: 300px;
+    }
+    .menuTitle {
+        font-size: 24px;
+    }
+    .dishWidget p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width:950px) {
+    #header_img {
+        height: 350px;
+    }
+    nav {
+        height: 80px;
+    }
+    #bestellapp_logo {
+        width: 80px;
+    }
+    #menuIcon {
+        width: 24px;
+    }
+    #logo_img {
+        width: 250px;
+        transform: translateX(-50%) translateY(13%);
+    }
+    .logo-wrapper {
+        width: 140px;
+    }
+    .headline_container {
+        padding-top: 100px;
+    }
+    .headline {
+        font-size: 32px;
+    }
+    .subline {
+        font-size: 16px;
+        padding-bottom: 0;
+    }
+    .section_bar h2 {
+        font-size: 24px;
+    }
+    .section_bar {
+        height: 42px;
+    }
+    .section_bar img {
+        width: 60px;
+        padding-bottom: 12px;
+    }
+    .gap {
+        display: block;
+    }
+    .dishWidget {
+        flex-direction: column;
+    }
+    .dishImage {
+        width: 100%;
+    }
+    .menuDescription {
+        width: 100%;
+    }
+    .menuAssets {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .price {
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width:768px) {
+    #basketMobile {
+        display: block;
+    }
+    .menucardContentWrapper {
+        display: block;
+    }
+    .basket {
+        display: none;
+    }
+    .content {
+        width: 100%;
+    }
+    #basketMobile {
+        position: sticky;
+        bottom: 8px;
+        width: 100%;
+    }
+}
+
+@media (max-width:450px) {
+    .menu_navigation {
+        gap: 24px;
+        font-size: 16px;
+    }
+    .contentWrapperFooter {
+        flex-direction: column;
+        gap: 12px;
+    }
+    footer {
+        height: 120px;
+    }
+}

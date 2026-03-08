@@ -30,6 +30,10 @@ nav{
     z-index: 2;
 }
 
+#menuIcon {
+    cursor: pointer;
+}
+
 body {
     font-family: 'Palanquin ', sans-serif;
     background-color: #2A1610;
@@ -236,4 +240,8 @@ footer a:hover {
     display: flex;
     justify-content: end;
     padding: 16px;
+}
+
+#basketMobile {
+    display: none;
 }
