@@ -1,12 +1,12 @@
 .dishWidget {
     display: flex;
     align-items: center;
-    margin: 20px;
+    margin: 20px 20px;
     gap: 20px;
     border-radius: 5px;
+    border: 1px solid #D4AF37;
     padding: 8px 12px;
     background-color: #9d6e5bcc;
-    margin-bottom: 20px;
 }
 
 .dishImage {
@@ -48,9 +48,10 @@
     margin-bottom: 24px;
 }
 
-.addToCartButton {
+.button {
     background-color: #4CAF50;
-    border: none;
+    border: 1px solid white;
+    border-radius: 5px;
     color: white;
     padding: 10px 20px;
     font-size: 16px;

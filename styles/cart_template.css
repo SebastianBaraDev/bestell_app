@@ -19,4 +19,32 @@
 
 .dishContainer img {
     width: 24px;
+    cursor: pointer;
+}
+
+hr {
+    border: 2px solid white;
+}
+
+.priceInfo {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+    padding-bottom: 12px;
+}
+
+.priceContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.textArea {
+    display: flex;
+    flex-direction: column;
+}
+
+.priceArea {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
 }

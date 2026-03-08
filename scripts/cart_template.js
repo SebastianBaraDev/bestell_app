@@ -15,21 +15,26 @@ function getCartTemplate(dish, price) {
   `;
 }
 
-function getPriceTemplate(price) {
+function getPriceTemplate(subtotal, total) {
   return `
+        <hr>
     <div class="priceContainer">
 
-        <div class="text">
+      <div class="priceInfo">
+        <div class="textArea">
           <p>Zwischensumme:</p>
-          <p>${dish.amount} x </p>
           <p>Lieferkosten:</p>
-          <p>${price.toFixed(2).replace('.', ',')} €</p>
           <p>Gesamtsumme:</p>
         </div>
 
-        <div class="price">
-        
+        <div class="priceArea">
+          <p>${subtotal.toFixed(2).replace('.',',')} €</p>
+          <p>5,00 €</p>
+          <p>${total.toFixed(2).replace('.',',')} €</p>
         </div>
+      </div>
+      
+        <button class="button" onclick="showOrderSuccessDialog()">Send Order</button>
 
     </div>
   `;

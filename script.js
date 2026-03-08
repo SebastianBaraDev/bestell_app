@@ -45,6 +45,7 @@ function addToCart(id) {
       shoppingCart.push(dish);
     }
   renderShoppingCartDesktop();
+  renderPriceSectionDesktop()
 }
 
 function renderShoppingCartDesktop() {
@@ -56,12 +57,17 @@ function renderShoppingCartDesktop() {
        const price = dish.price * dish.amount;
        shoppingCartDesktop.innerHTML += getCartTemplate(dish, price);
       }
+  renderPriceSectionDesktop();
 }
 
-function renderPriceSectionDesktop(dish, price, amount) {
+function renderPriceSectionDesktop() {
+  const subtotal = calculateSubtotal();
+  const deliverycost = shoppingCart.length > 0 ? 5 : 0;
+  const total = subtotal + deliverycost;
+
   let prices = document.getElementById('priceSection');
   prices.innerHTML = '';
-  prices.innerHTML = get
+  prices.innerHTML = getPriceTemplate(subtotal, total)
 }
 
 function renderShoppingCartMobile() {
@@ -96,6 +102,45 @@ function increaseAmount(id) {
   renderShoppingCartDesktop();
 }
 
-//Gericht entfernen - Delete Function
-//Gesamtpreis berechnen
-//Bestellung abschicken (Dialog mit Bestätigung)
+function deleteDish(id){
+  let dish = myDishes.find(d => d.id === id);
+  dish.amount = 0;
+
+  let cartDish = shoppingCart.find(d => d.id === id);
+  shoppingCart.splice(shoppingCart.indexOf(dish), 1);
+  cartDish = 0;
+
+  renderShoppingCartDesktop();
+}  
+
+function calculateSubtotal() {
+  let subtotal = 0;
+
+  for (let i = 0; i < shoppingCart.length; i++) {
+    subtotal += shoppingCart[i].price * shoppingCart[i].amount;
+  }
+
+  return subtotal;
+}
+
+function showOrderSuccessDialog(){
+  let element = document.getElementById("orderSuccess");
+  element.classList.add("showElement");
+}
+
+function hideOrderSuccessDialog(){
+  let element = document.getElementById("orderSuccess");
+  element.classList.remove("showElement");
+}
+
+//Order Success-Dialog einfügen --> orderSuccess ID
+//Dialog nach 4 sec automatisch schließen
+//Order senden Button im Warenkorb hinzufügen
+
+//responive Warenkorb-Button hinzufügen
+//OpenDialog Funktion auf den Button legen
+//Dialog anlegen
+//Dialog mit Warenkorb Inhalten füllen - bestehende Funktionen prüfen
+//Dialog schließen Funktion
+
+//Responsive Design anpassen
