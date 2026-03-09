@@ -44,6 +44,10 @@ function addToCart(id) {
   if (!shoppingCart.includes(dish)) {
       shoppingCart.push(dish);
     }
+  renderShoppingCart();
+}
+
+function renderShoppingCart(){
   renderShoppingCartDesktop();
   renderPriceSectionDesktop();
   renderShoppingCartMobile();
@@ -70,7 +74,9 @@ function renderPriceSectionDesktop() {
 
   let prices = document.getElementById('priceSection');
   prices.innerHTML = '';
-  prices.innerHTML = getPriceTemplate(subtotal, total)
+  if(document.getElementById('dishWrapper').innerHTML != ''){
+  prices.innerHTML = getPriceTemplate(subtotal, total);
+  }
 }
 
 function renderShoppingCartMobile() {
@@ -91,7 +97,9 @@ function renderPriceSectionMobile() {
 
   let prices = document.getElementById('mobilePriceSection');
   prices.innerHTML = '';
-  prices.innerHTML = getPriceTemplate(subtotal, total)
+  if(document.getElementById('mobileDishWrapper').innerHTML != ''){
+  prices.innerHTML = getPriceTemplate(subtotal, total);
+  }
 }
 
 function decreaseAmount(id){
@@ -102,8 +110,7 @@ function decreaseAmount(id){
       shoppingCart.splice(shoppingCart.indexOf(dish), 1);
       dish.amount--;
     }
-  renderShoppingCartDesktop();
-  renderShoppingCartMobile();
+  renderShoppingCart();
 }
 
 function increaseAmount(id) {
@@ -113,8 +120,7 @@ function increaseAmount(id) {
   } else {
     alert("You cannot order more than 20 of the same dish.");
   }
-  renderShoppingCartDesktop();
-  renderShoppingCartMobile();
+  renderShoppingCart()
 }
 
 function deleteDish(id){
@@ -124,9 +130,8 @@ function deleteDish(id){
   let cartDish = shoppingCart.find(d => d.id === id);
   shoppingCart.splice(shoppingCart.indexOf(dish), 1);
   cartDish = 0;
-
-  renderShoppingCartDesktop();
-  renderShoppingCartMobile();
+  
+  renderShoppingCart();
 }  
 
 function calculateSubtotal() {
