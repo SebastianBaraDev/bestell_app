@@ -172,15 +172,8 @@ nav{
 .menuLayout{
     display:grid;
     grid-template-columns:1fr 320px;
-    gap:32px;
     max-width:1440px;
     margin:0 auto;
-}
-
-/* ---------------- MENU CONTENT ---------------- */
-
-.menuContent{
-    padding:16px;
 }
 
 /* ---------------- BASKET ---------------- */
@@ -196,8 +189,7 @@ nav{
     padding:16px;
     position:sticky;
     top:140px;
-    height:fit-content;
-    max-height:80vh;
+    height:500px;
 }
 
 .basketTitle{
@@ -265,4 +257,13 @@ footer a:hover{
 
 #basketMobile{
     display:none;
+}
+
+aside {
+    position: fixed;
+    bottom: 0;
+    right: 0px;
+    width: 300px;
+    height: 100%;
+    z-index: 9999;
 }

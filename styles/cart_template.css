@@ -50,10 +50,14 @@ hr {
 }
 
 .emptyBasket {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     padding-top: 20px;
+    align-items: center;
 }
 
 .emptyBasket img {
     margin-top: 40px;
+    width: 150px;
 }

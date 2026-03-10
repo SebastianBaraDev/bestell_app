@@ -101,6 +101,10 @@
         margin-bottom:0;
     }
 
+    .gap {
+        flex-direction: column;
+    }
+
 }
 
 /* ---------- MOBILE ---------- */
@@ -120,10 +124,6 @@
         position:sticky;
         bottom:8px;
         width:100%;
-    }
-
-    .gap {
-        flex-direction: column;
     }
 
 }
