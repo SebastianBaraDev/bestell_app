@@ -14,7 +14,7 @@
     <link rel="icon" type="favicon" href="assets/icons/favicon.png">
 
     <script src="./scripts/dishes.js"></script>
-    <script src="./scripts/dishes_templates.js"></script>
+    <script src="./scripts/dish_template.js"></script>
     <script src="./scripts/cart_template.js"></script>
     <script src="./script.js"></script>
 </head>
@@ -33,7 +33,6 @@
             </div>
     </header> 
 
-    <main>
         <section id="logo_section">
                 <div class="headline_container">
                     <h2 class="headline">Steak House</h2>
@@ -44,76 +43,73 @@
                 <p class="subline">Premium cuts. Open flame. Pure flavor.</p>
         </section>
 
-        <section class="menucardContentWrapper">
-        <section class="content">
+<main class="menuPage">
 
-          <div class="menu_navigation">
-                  <a href="#menuSection">Premium Cuts</a>
-                  <a href="#SidesSection">Sides</a>
-                  <a href="#DrinksSection">Drinks</a>
-          </div>
-        
-        <section id="menuSection">
-            <div class="section_bar">
-              <div class="contentWrapperBar">
-                <img src="./assets/icons/meat.png">
-                <h2 class="section_title">Prime Cuts</h2>
-              </div>
+    <div class="menu_navigation container">
+        <a href="#menuSection">Premium Cuts</a>
+        <a href="#SidesSection">Sides</a>
+        <a href="#DrinksSection">Drinks</a>
+    </div>
+
+
+    <!-- PRIME CUTS -->
+    <div class="section_bar">
+        <div class="container contentWrapperBar">
+            <img src="./assets/icons/meat.png">
+            <h2 class="section_title">Prime Cuts</h2>
+        </div>
+    </div>
+
+    <section class="menuLayout container" id="menuSection">
+
+        <div class="menuContent">
+            <div id="meat_dishes"></div>
+        </div>
+
+        <aside class="basketWrapper">
+            <div class="basket" id="basket">
+                <h2 class="basketTitle">Your Basket</h2>
+
+                <div id="shoppingCartDesktop">
+                    <div id="dishWrapper"></div>
+                    <div id="priceSection"></div>
+                </div>
             </div>
+        </aside>
 
-            <div class="contentWrapper">
-              <div id="meat_dishes">
-                <!-- Menü-Items would be dynamically inserted here -->
-              </div>
-            </div>
-        </section>
+    </section>
 
-        <section id="SidesSection">
-            <div class="section_bar">
-              <div class="contentWrapperBar">
-                <img src="./assets/icons/fries.png">
-                <h2 class="section_title">Sides</h2>
-              </div>
-            </div>
 
-            <div class="contentWrapper">
-              <div id="side_dishes">
-                <!-- Sides-Items would be dynamically inserted here -->
-              </div>
-            </div>
-        </section>
+    <!-- SIDES -->
+    <div class="section_bar">
+        <div class="container contentWrapperBar">
+            <img src="./assets/icons/fries.png">
+            <h2 class="section_title">Sides</h2>
+        </div>
+    </div>
 
-        <section id="DrinksSection">
-            <div class="section_bar">
-              <div class="contentWrapperBar">
-                <img src="./assets/icons/vino.png">
-                <h2 class="section_title">Drinks</h2>
-              </div>
-            </div>
+    <section class="menuLayout container" id="SidesSection">
+        <div class="menuContent">
+            <div id="side_dishes"></div>
+        </div>
+    </section>
 
-            <div class="contentWrapper">
-              <div id="drinks">
-                <!-- Drinks-Items would be dynamically inserted here -->
-              </div>
-            </div>
-        </section>
 
-        <button class="button" onclick="showBasketMobileDialog()" id="basketMobile">Open Basket</button>
-        </section>
+    <!-- DRINKS -->
+    <div class="section_bar">
+        <div class="container contentWrapperBar">
+            <img src="./assets/icons/vino.png">
+            <h2 class="section_title">Drinks</h2>
+        </div>
+    </div>
 
-        <section class="basketWrapper">
-          <div class="basket" id="basket">
-            <h2 class="basketTitle">Your Basket</h2>
-            <div id="shoppingCartDesktop">
-              <div id="dishWrapper">
-              <!-- Shopping cart items will be rendered here -->
-              </div>
-              <div id="priceSection">
-              <!-- Prices will be rendered here -->
-              </div>
-            </div>
-          </div>
-        </section>
+    <section class="menuLayout container" id="DrinksSection">
+        <div class="menuContent">
+            <div id="drinks"></div>
+        </div>
+    </section>
+
+  </main>
 
         <dialog id="orderSuccessDialog">
           <div class="right">
@@ -145,10 +141,6 @@
           </main>
 
         </dialog>
-
-        </section>
-
-    </main>
 
     <footer>
       <div class="contentWrapperFooter">

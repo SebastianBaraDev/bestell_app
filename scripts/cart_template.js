@@ -39,3 +39,13 @@ function getPriceTemplate(subtotal, total) {
     </div>
   `;
 }
+
+function getInfoCartTemplate() {
+  return `
+    <div class="emptyBasket">
+      <p>Nothing here yet.</p>
+      <p>Go ahead and choose something delicious!</p>
+      <img src="./assets/img/basket.png">
+    </div>
+  `;
+}

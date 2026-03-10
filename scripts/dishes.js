@@ -1,4 +1,4 @@
-let myDishes = [
+const myDishes = [
   {
     "id": 1,
     "name": "Ribeye Steak (300g)",
