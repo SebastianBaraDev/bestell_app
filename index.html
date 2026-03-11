@@ -51,6 +51,16 @@
         <a href="#DrinksSection">Drinks</a>
     </div>
 
+    <aside class="basketWrapper">
+            <div class="basket" id="basket">
+                <h2 class="basketTitle">Your Basket</h2>
+
+                <div id="shoppingCartDesktop">
+                    <div id="dishWrapper"></div>
+                    <div id="priceSection"></div>
+                </div>
+            </div>
+    </aside>
 
     <!-- PRIME CUTS -->
     <div class="section_bar">
@@ -65,17 +75,6 @@
         <div class="menuContent">
             <div id="meat_dishes"></div>
         </div>
-
-        <aside class="basketWrapper">
-            <div class="basket" id="basket">
-                <h2 class="basketTitle">Your Basket</h2>
-
-                <div id="shoppingCartDesktop">
-                    <div id="dishWrapper"></div>
-                    <div id="priceSection"></div>
-                </div>
-            </div>
-        </aside>
 
     </section>
 
@@ -141,6 +140,15 @@
           </main>
 
         </dialog>
+
+        <div id="basketMobileBar">
+          <div class="mobileBasketWrapper">
+            <a href="#bestellapp_logo"><img src="./assets/icons/Home.png" alt="Home Icon"></a>
+            <img src="./assets/icons/person.png" alt="Person Icon">
+            <img src="./assets/icons/orders.png" alt="Order Icon">
+            <img src="./assets/icons/basket_small.png" alt="mobile Basket Icon" onclick="showBasketMobileDialog()" id="mobileBasket">
+          </div>
+          </div>
 
     <footer>
       <div class="contentWrapperFooter">

@@ -119,7 +119,7 @@
         display:none;
     }
 
-    #basketMobile{
+    #basketMobileBar{
         display:block;
         position:sticky;
         bottom:8px;

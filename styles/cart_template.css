@@ -55,9 +55,10 @@ hr {
     flex-direction: column;
     padding-top: 20px;
     align-items: center;
+    text-align: center;
 }
 
 .emptyBasket img {
-    margin-top: 40px;
-    width: 150px;
+    margin-top: 30px;
+    width: 120px;
 }
