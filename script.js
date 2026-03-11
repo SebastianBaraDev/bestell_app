@@ -108,7 +108,8 @@ function increaseAmount(id) {
   } else {
     alert("You cannot order more than 20 of the same dish.");
   }
-  renderShoppingCart()
+  renderDishes();
+  renderShoppingCart();
 }
 
 function deleteDish(id){
@@ -178,4 +179,8 @@ function renderEmptyBasketInfo(){
     let emptyBasket = document.getElementById('dishWrapper');
     if(emptyBasket.innerHTML === "")
         emptyBasket.innerHTML += getInfoCartTemplate();
+
+    let emptyMobileBasket = document.getElementById('mobileDishWrapper');
+    if(emptyMobileBasket.innerHTML === "")
+        emptyMobileBasket.innerHTML += getInfoCartTemplate();
 }

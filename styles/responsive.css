@@ -105,6 +105,9 @@
         flex-direction: column;
     }
 
+    aside {
+        height: 96%;
+    }
 }
 
 /* ---------- MOBILE ---------- */

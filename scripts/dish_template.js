@@ -1,5 +1,5 @@
 function getDishTemplate(dish) {
-  let buttonText = dish.amount > 0 ? "Added" : "Add to basket";
+  let buttonText = dish.amount > 0 ? `Added ${dish.amount}` : "Add to basket";
   return `
 <div class="dishWidget">
     <img src="${dish.picture}" class="dishImage">
